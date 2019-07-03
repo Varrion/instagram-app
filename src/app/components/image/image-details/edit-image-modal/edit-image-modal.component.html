@@ -1,0 +1,52 @@
+<div *ngIf="image">
+  <div class="modal-header">
+    <h1 class="modal-title">Edit Image</h1>
+    <button type="button" class="close" aria-label="Close"
+            (click)="modal.dismiss('Cross click')"> x
+    </button>
+  </div>
+  <div class="modal-body">
+    <form class="align-content-center">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label>Title</label>
+            <input [(ngModel)]="title" name="title" type="text" class="form-control"
+                   placeholder="Enter name"/>
+            <small class="form-text text-muted">Add unique title for the Image.
+            </small>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label>Url</label>
+            <input [(ngModel)]="url" name="url" type="text" class="form-control"
+                   placeholder="Image Url"/>
+          </div>
+
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label>AlbumId</label>
+            <input [(ngModel)]="albumId" name="albumId" type="number" class="form-control" placeholder="id">
+            <small class="form-text text-muted">In which album is this photo stored.
+            </small>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label>Thumbnail</label>
+            <input [(ngModel)]="thumbnailUrl" name="thumbnailUrl" type="text" class="form-control"
+                   placeholder="Url"/>
+            <small class="form-text text-muted">Small Image url.
+            </small>
+          </div>
+        </div>
+        <div class="col-lg-12  modal-footer">
+          <button type="submit" class="btn btn-primary" (click)="editImageDetails()">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

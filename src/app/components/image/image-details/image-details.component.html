@@ -1,0 +1,28 @@
+<div *ngIf="imageDetails">
+  <h1 class="text-center">Image {{imageDetails.id}} Details Page </h1>
+
+  <div class="row mt-4">
+    <div class="col-7">
+      <img src={{imageDetails.url}} width="600px" height="600px"/>
+    </div>
+    <div class="col-5 d-flex flex-column ">
+      <h2 class="m-auto">{{imageDetails.title}} </h2>
+      <h3>Image informations: </h3>
+      <p>Image albumId: {{imageDetails.albumId}}</p>
+      <p>Image Url: <a href={{imageDetails.url}} > {{imageDetails.url}} </a></p>
+      <p>Image Thumbnail: <a href={{imageDetails.thumbnailUrl}} > {{imageDetails.thumbnailUrl}} </a></p>
+
+      <div class="row mt-auto mb-3">
+        <div class="col-6">
+          <button class="btn btn-danger" (click)="openDeleteModal()"> Delete</button>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <button class="btn btn-primary" (click)="openEditModal()"> Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

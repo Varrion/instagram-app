@@ -1,0 +1,13 @@
+<h1 class="text-center">Images</h1>
+
+<div class="row mt-5" *ngIf="images">
+
+  <div class="col-lg-2 mt-3" *ngFor="let image of images">
+    <div class="card ">
+      <a [routerLink]="[image.id]">
+        <img src={{image.thumbnailUrl}} alt="Image {{image.id}}" width="150px" height="150px"/>
+      </a>
+      <small class="card-title text-center">Image {{image.id}}</small>
+    </div>
+  </div>
+</div>
